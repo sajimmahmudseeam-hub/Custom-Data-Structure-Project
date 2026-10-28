@@ -1,0 +1,95 @@
+HOW TO RUN - DATA STRUCTURES ASSIGNMENT 2
+========================================
+
+REQUIREMENTS
+- JDK 17 or newer
+- No third-party libraries or build tools
+- Source files use the package com.example.assignment2 and are kept under src/
+- Automated tests are kept separately under test/
+
+CHECK JAVA
+Run these commands in Command Prompt / PowerShell or a terminal:
+    java -version
+    javac -version
+
+PROJECT LAYOUT
+    src/com/example/assignment2/Main.java
+    src/com/example/assignment2/CircularQueue.java
+    src/com/example/assignment2/BinarySearchTree.java
+    test/com/example/assignment2/Assignment2Tests.java
+
+RUN THE APPLICATION - WINDOWS
+1. Extract the ZIP file.
+2. Open the extracted Assignment2_Final_Project folder.
+3. Run run.bat (double-click it, or enter .\run.bat in PowerShell).
+
+RUN THE APPLICATION - macOS / LINUX
+1. Extract the ZIP file.
+2. Open a terminal in the extracted Assignment2_Final_Project folder.
+3. Run:
+    chmod +x run.sh
+    ./run.sh
+
+The launch script compiles the application using:
+    javac -encoding UTF-8 --release 17 -Xlint:all -Werror -d out \
+      src/com/example/assignment2/CircularQueue.java \
+      src/com/example/assignment2/BinarySearchTree.java \
+      src/com/example/assignment2/Main.java
+
+MAIN MENU
+- Category A - Linear data structure (Circular Queue): select option 1.
+- Category B - Non-linear / Advanced data structure (Binary Search Tree, BST): select option 2.
+- Guided demonstrations: select option 3.
+- Exit: select option 0.
+
+The queue and BST keep their state when you go back to the main menu and reopen
+their submenu. Their state is held in memory only and is not saved after the
+program closes.
+
+CATEGORY A - LINEAR DATA STRUCTURE: CIRCULAR QUEUE MENU
+1 - Enqueue
+2 - Dequeue
+3 - Peek
+4 - Status
+5 - Physical array view
+6 - Clear
+7 - Change capacity (queue must be empty)
+0 - Back
+
+CATEGORY B - NON-LINEAR / ADVANCED: BINARY SEARCH TREE (BST) MENU
+1 - Insert
+2 - Search
+3 - Delete
+4 - Traversals
+5 - Min/Max
+6 - Tree structure
+7 - Range search
+8 - Validate
+9 - Clear
+0 - Back
+
+RUN AUTOMATED TESTS - WINDOWS
+    test.bat
+
+RUN AUTOMATED TESTS - macOS / LINUX
+    chmod +x test.sh
+    ./test.sh
+
+The test script compiles the application and separate test file with strict
+compiler warnings enabled, then runs com.example.assignment2.Assignment2Tests.
+Tests include required examples, edge cases, randomized queue operations,
+randomized BST operations, range queries, and a 5,000-node skewed tree.
+
+SUPPORTING FILES
+- README.md - project overview, structure, features, and complexity.
+- DEMONSTRATION-OUTPUT.txt - captured guided demonstration output.
+- TEST-RESULT.txt - recorded automated test results.
+- Assignment2_CircularQueue_BST_Report.docx and Assignment2_CircularQueue_BST_Report.pdf - project report copies.
+  The report is 10 pages, with the Abstract on page 2 and Contents on page 3.
+
+PRESENTATION FILES
+- Final_Presentation.pptx - editable presentation deck.
+- Final_Presentation.pdf - PDF version of the same deck for easy viewing.
+
+PRESENTATION
+Open Final_Presentation.pptx for the editable 13-slide presentation, or Final_Presentation.pdf for its viewing copy. The presentation covers both assignment structures, demonstrations, complexity, and test evidence.

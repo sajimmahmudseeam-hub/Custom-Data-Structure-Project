@@ -1,0 +1,33 @@
+Data Structures Assignment 2 - Automated Test Record
+====================================================
+
+Verification date: 28 October 2026
+Executed command: sh test.sh (from a fresh extraction)
+Compiler flags: javac -encoding UTF-8 --release 17 -Xlint:all -Werror
+Verification environment: OpenJDK 21.0.12.1, compiled targeting Java 17 APIs
+
+Observed result:
+All 15610 checks passed.
+
+The fresh run compiled the application and separate test source with warnings
+configured as errors, then exercised the dependency-free regression suite.
+Coverage includes the prescribed capacity-5 queue sequence and FIFO drain,
+wrap-around, overflow/underflow, clear and capacity boundaries; BST ordering,
+search, traversals, duplicate insertion, leaf/one-child/two-child deletion,
+successor relinking, empty-tree behavior, integer boundaries and range search;
+plus randomized operations, a 5,000-node skewed tree, visualizers and console
+menu input handling.
+
+The packaged Windows .bat and Unix .sh scripts were reviewed for their source
+paths and compile/run commands. The Unix test command was executed in this
+verification environment; Windows batch files were not executed on Windows.
+The archive was checked for valid ZIP integrity, expected source and test paths,
+consistent README/run instructions, demonstration transcript and report files.
+Compiled output in out/ was removed before packaging; the scripts regenerate it
+when run. Tests provide evidence for exercised scenarios, not proof for every
+possible input. The BST is intentionally unbalanced and has O(n) worst-case
+insert/search/delete time.
+
+The PowerPoint and its PDF copy are included alongside the 10-page report in
+Word and PDF formats. The report has a dedicated Abstract on page 2 and Contents
+on page 3. Category names and option-to-operation mappings are unchanged.

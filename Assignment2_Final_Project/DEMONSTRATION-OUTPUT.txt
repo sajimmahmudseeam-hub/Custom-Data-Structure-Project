@@ -1,0 +1,147 @@
+
+=== Data Structures Assignment 2 ===
+MAIN MENU:
+1. Category A - Linear Data Structure: Circular Queue (capacity 5)
+2. Category B - Non-linear / Advanced: Binary Search Tree (BST) (0 nodes)
+3. Run required guided demonstrations
+0. Exit
+Choose an option: 3
+--- Circular Queue demonstration (capacity 5) ---
+
+Start empty:
+Physical array slots:
+  [0] <empty>  <-- front and rear (empty queue)
+  [1] <empty>
+  [2] <empty>
+  [3] <empty>
+  [4] <empty>
+front=0, rear=0, size=0/5
+Logical FIFO order: []
+
+After enqueue 10, 20, 30:
+Physical array slots:
+  [0] 10  <-- front (next dequeue)
+  [1] 20
+  [2] 30
+  [3] <empty>  <-- rear (next insertion)
+  [4] <empty>
+front=0, rear=3, size=3/5
+Logical FIFO order: [10, 20, 30]
+dequeue() -> 10 (expected 10)
+
+After removing the first element:
+Physical array slots:
+  [0] <empty>
+  [1] 20  <-- front (next dequeue)
+  [2] 30
+  [3] <empty>  <-- rear (next insertion)
+  [4] <empty>
+front=1, rear=3, size=2/5
+Logical FIFO order: [20, 30]
+
+After enqueue 40, 50, 60 (wrap-around complete):
+Physical array slots:
+  [0] 60
+  [1] 20  <-- front and rear (full queue)
+  [2] 30
+  [3] 40
+  [4] 50
+front=1, rear=1, size=5/5
+Logical FIFO order: [20, 30, 40, 50, 60]
+Expected logical FIFO queue: [20, 30, 40, 50, 60]
+Expected full-queue behavior: Queue is full.
+
+After rejected enqueue; state must be unchanged:
+Physical array slots:
+  [0] 60
+  [1] 20  <-- front and rear (full queue)
+  [2] 30
+  [3] 40
+  [4] 50
+front=1, rear=1, size=5/5
+Logical FIFO order: [20, 30, 40, 50, 60]
+Drain queue in FIFO order:
+  dequeue() -> 20
+  dequeue() -> 30
+  dequeue() -> 40
+  dequeue() -> 50
+  dequeue() -> 60
+
+After draining the queue:
+Physical array slots:
+  [0] <empty>  <-- front and rear (empty queue)
+  [1] <empty>
+  [2] <empty>
+  [3] <empty>
+  [4] <empty>
+front=0, rear=0, size=0/5
+Logical FIFO order: []
+
+--- Binary Search Tree demonstration ---
+Inserted: 50, 30, 70, 20, 40, 60, 80
+Tree structure:
+50
+|-- L: 30
+|   |-- L: 20
+|   `-- R: 40
+`-- R: 70
+    |-- L: 60
+    `-- R: 80
+Inorder   : [20, 30, 40, 50, 60, 70, 80]
+Preorder  : [50, 30, 20, 40, 70, 60, 80]
+Postorder : [20, 40, 30, 60, 80, 70, 50]
+Search 40 (hit): true
+Search 90 (miss): false
+Minimum / maximum: 20 / 80
+Duplicate 40 insertion result (false means rejected): false
+Range search [35, 70]: [40, 50, 60, 70]
+
+Deletion case 1 - leaf node 20:
+Deleted: true
+50
+|-- L: 30
+|   `-- R: 40
+`-- R: 70
+    |-- L: 60
+    `-- R: 80
+
+Deletion case 2 - node 30 now has one child (40):
+Deleted: true
+50
+|-- L: 40
+`-- R: 70
+    |-- L: 60
+    `-- R: 80
+
+Original tree rebuilt for deletion case 3:
+50
+|-- L: 30
+|   |-- L: 20
+|   `-- R: 40
+`-- R: 70
+    |-- L: 60
+    `-- R: 80
+Delete two-child root 50: true
+60
+|-- L: 30
+|   |-- L: 20
+|   `-- R: 40
+`-- R: 70
+    `-- R: 80
+Delete missing value 999: false
+BST ordering valid: true
+
+Empty-tree behavior:
+Search 40: false
+Delete 40: false
+findMin(): Tree is empty.
+findMax(): Tree is empty.
+
+=== Data Structures Assignment 2 ===
+MAIN MENU:
+1. Category A - Linear Data Structure: Circular Queue (capacity 5)
+2. Category B - Non-linear / Advanced: Binary Search Tree (BST) (0 nodes)
+3. Run required guided demonstrations
+0. Exit
+Choose an option: 0
+Thank you for using Data Structures Assignment 2. Goodbye.
